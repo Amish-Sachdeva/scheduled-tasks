@@ -17,7 +17,7 @@ if today in birthdays_dict:
         content = content.replace("[NAME]", birthday_person["name"])
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
-        email = os.environ["EMAIL"]
+        email = os.environ["MY_EMAIL"]
         password = os.environ["EMAIL_APP_PASS"]
         connection.starttls()
         connection.login(user=email, password=password)
