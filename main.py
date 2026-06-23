@@ -18,7 +18,7 @@ if today in birthdays_dict:
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
         email = os.environ["MY_EMAIL"]
-        password = os.environ["EMAIL_APP_PASS"]
+        password = os.environ["MY_PASSWORD"]
         connection.starttls()
         connection.login(user=email, password=password)
         connection.sendmail(from_addr=email,
